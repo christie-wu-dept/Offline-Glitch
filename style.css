@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+#cloud {
+  width:100%;
+  position: relative;
+  top: -50px;
+}
+
+#ground {
+  width:100%;
+  position: absolute;
+  top: 187px;
+}
+
+#game {
+  width: 500px;
+  height: 250px;
+  /* border: 1px solid black; */
+  overflow: hidden;
+  position:relative;
+  margin:100px;
+}
+
+#character {
+  width: 43px;
+  height: 50px;
+  /* background-color: red; */
+  position: relative;
+  top: 150px;
+  left: 0px;
+  z-index: 10;
+}
+
+img {
+  width: 100%;
+}
+
+.animate {
+  animation: jump 500ms infinite;
+}
+
+@keyframes jump {
+  0% {
+    top: 150; 
+  }
+  30% {
+    top: 80px; /* 250-(20px + the height of the block)*/ 
+  } /*we want the character to stay up for a little bit*/
+  70% {
+    top: 80px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+#block {
+  width: 40px;
+  height: 40px;
+  /* background-color: blue; */
+  position: relative;
+  top: 110px;
+  left: 480px;
+  animation: block 1.2s infinite linear;
+  z-index: 9;
+}
+
+@keyframes block {
+  0% {
+    left: 460px;
+  }
+  100% {
+    left: -60px;
+  }
+}
+
+
